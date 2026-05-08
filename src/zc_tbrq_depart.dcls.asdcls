@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_TBRQ_DEPART'
+@MappingRole: true
+define role ZC_TBRQ_DEPART {
+  grant select on ZC_TBRQ_DEPART
+  where INHERITING CONDITIONS FROM ENTITY ZR_TBRQ_DEPART REPLACING { ROOT WITH _BaseEntity };
+}

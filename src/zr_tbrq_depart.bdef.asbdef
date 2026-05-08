@@ -1,0 +1,46 @@
+managed implementation in class ZBP_R_TBRQ_DEPART unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBRQ_DEPART alias ZrTbrqDepart
+persistent table ZTB_RQ_DEPART
+extensible
+draft table ZTBRQ_DEPART_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   Rqdepart;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Rqdepart;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_RQ_DEPART corresponding extensible
+  {
+    Rqdepart = rqdepart;
+    Rqdepartname = rqdepartname;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+}

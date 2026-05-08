@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Request Department"
+  },
+  "ui5AppDetails": {
+    "appId": "zrqdepartment"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_4F27ECFA642E7F2597CA1C1F1EC7208A524151B0_TM",
+    "semanticObject": "zrq_department",
+    "action": "manager",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_4F27ECFA642E7F2597CA1C1F1EC7208A524151B0_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Request Department"
+      }
+    }
+  ]
+}
